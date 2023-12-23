@@ -9,24 +9,23 @@ import retrofit2.http.GET
 import kotlin.reflect.KProperty
 
 
-
-private val BASE_URL =
-    "https://android-kotlin-fun-mars-server.appspot.com"
-
-private val retrofit = Retrofit.Builder()
-    .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
-    .baseUrl(BASE_URL)
-    .build()
+//private val BASE_URL =
+//    "https://android-kotlin-fun-mars-server.appspot.com"
+//
+//private val retrofit = Retrofit.Builder()
+//    .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+//    .baseUrl(BASE_URL)
+//    .build()
 
 interface MarsApiService {
     @GET("photos")
     suspend fun getPhotos(): List<MarsPhoto>
 }
-
-object MarsApi {
-    val retrofitService : MarsApiService by lazy {
-        retrofit.create(MarsApiService::class.java)
-    }
-}
-
-
+//
+//object MarsApi {
+//    val retrofitService : MarsApiService by lazy {
+//        retrofit.create(MarsApiService::class.java)
+//    }
+//}
+//
+//
